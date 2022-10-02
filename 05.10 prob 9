@@ -1,0 +1,30 @@
+a=float(input("latura:"))
+b=float(input("latura:"))
+c=float(input("latura:"))
+import math
+def triunghi():
+    global a,b,c
+    i=False
+    if a+b>c and a+c>b and b+c>a:
+        i=True
+    return i
+def aria():
+    global a,b,c
+    sp=(a+b+c)/2
+    if triunghi()==True:
+        return math.sqrt(sp*(sp-a)*(sp-b)*(sp-c))
+def h1():
+    global a,b,c
+    if triunghi()==True:
+        return (2*aria())/a 
+def h2():
+    global a,b,c
+    if triunghi()==True:
+        return (2*aria())/b 
+def h3():
+    global a,b,c
+    if triunghi()==True:
+        return (2*aria())/c 
+print(h1())
+print(h2())
+print(h3())
