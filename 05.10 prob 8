@@ -1,0 +1,36 @@
+a=float(input("latura:"))
+b=float(input("latura:"))
+c=float(input("latura:"))
+import math
+def triunghi():
+    global a,b,c
+    i=False
+    if a+b>c and a+c>b and b+c>a:
+        i=True
+    return i
+def ma():
+    global a,b,c
+    if triunghi()==True:
+        m=0.5*math.sqrt((2*(b**2))+(2*(c**2))-a**2)
+    else:
+        m="nu este triunghi"
+    return m
+def mb():
+    global a,b,c
+    m=0
+    if triunghi()==True:
+        m=0.5*math.sqrt((2*a**2)+(2*c**2)-c**2)
+    else:
+        m="nu este triunghi"
+    return m
+def mc():
+    global a,b,c
+    m=0
+    if triunghi()==True:
+        m=0.5*math.sqrt((2*b**2)+(2*a**2)-c**2)
+    else:
+        m="nu este triunghi"
+    return m
+print("Lungimea medianei corespunzatoare laturii a =",ma())
+print("Lungimea medianei corespunzatoare laturii b =",mb())
+print("Lungimea medianei corespunzatoare laturii c =",mc())
