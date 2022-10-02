@@ -1,0 +1,51 @@
+import math
+a,b,c,d=int(input("dat un  numar:")),int(input("dat un  numar:")),int(input("dat un  numar:")),int(input("dat un  numar:"))
+def triunghi(x,y,z):
+    i=False
+    if x+y>z and x+z>y and y+z>x:
+        i=True
+    return i
+def perimetru1():
+    global a,b,c
+    if triunghi(a,b,c)==True:
+        return a+b+c  
+def perimetru2():
+    global a,b,d
+    if triunghi(a,b,d)==True:
+        return a+b+d  
+def perimetru3():
+    global d,b,c
+    if triunghi(d,b,c)==True:
+        return d+b+c  
+def perimetru4():
+    global a,d,c
+    if triunghi(a,d,c)==True:
+        return a+d+c 
+def aria1():
+    sp=perimetru1/2
+    global a,b,c
+    if triunghi(a,b,c)==True:
+        return math.sqrt(sp*(sp-a)*(sp-b)*(sp-c))
+def aria2():
+    sp=perimetru2/2
+    global a,b,d
+    if triunghi(a,b,d)==True:
+        return math.sqrt(sp*(sp-a)*(sp-b)*(sp-d))
+def aria3():
+    sp=perimetru3/2
+    global d,b,c
+    if triunghi(d,b,c)==True:
+        return math.sqrt(sp*(sp-d)*(sp-b)*(sp-c))
+def aria4():
+    sp=perimetru4/2
+    global a,d,c
+    if triunghi(a,d,c)==True:
+        return math.sqrt(sp*(sp-a)*(sp-d)*(sp-c))
+print(perimetru1())
+print(perimetru2())
+print(perimetru3())
+print(perimetru4())
+print(aria1())
+print(aria2())
+print(aria3())
+print(aria4())
